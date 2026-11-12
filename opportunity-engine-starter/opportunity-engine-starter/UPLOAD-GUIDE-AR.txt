@@ -1,0 +1,25 @@
+الآن في المستودع عندك ملف scanner.py قديم. استبدله بالملف المصحح الموجود في هذه الحزمة، ولا تطبق أي patch قديم.
+
+الخطوات في GitHub:
+
+1) فك ضغط الحزمة.
+2) افتح المستودع: https://github.com/Viciniio/autonomous-opportunity-engine
+3) استبدال scanner.py:
+   - افتح scanner.py.
+   - اضغط رمز القلم (Edit this file / Modifier ce fichier).
+   - حدد كل محتوى الملف واحذفه.
+   - افتح scanner.py من الحزمة، وانسخ محتواه كاملًا والصقه.
+   - اضغط Commit changes / Valider les modifications.
+4) إضافة README.md:
+   - Ajouter un fichier / Add file > Créer un fichier / Create new file.
+   - اسم الملف: README.md
+   - انسخ المحتوى من README.md الموجود في الحزمة ثم احفظ.
+5) إضافة GitHub Actions workflow:
+   - Ajouter un fichier / Add file > Créer un fichier / Create new file.
+   - اسم الملف بالضبط: .github/workflows/scan.yml
+   - انسخ المحتوى من .github/workflows/scan.yml الموجود في الحزمة ثم احفظ.
+6) افتح Actions > Opportunity Scanner > Run workflow لتشغيل أول فحص يدوي.
+
+لا تحتاج لتشغيل شيء على الكمبيوتر. ولا تضف أي API key أو Cookie أو كلمة مرور إلى ملفات المستودع. البحث يجرب Firecrawl دون API key أولًا؛ إذا ظهرت حدود استخدام نضيف FIRECRAWL_API_KEY كـ Repository secret لاحقًا.
+
+بعد التشغيل، سينشئ scanner.py تلقائيًا data/opportunities.json و docs/latest-opportunities.md، والـ workflow يحفظهما في المستودع.
